@@ -1,0 +1,13 @@
+{
+  "name": "o-log/php-message",
+  "description": "Request and response related helpers",
+  "require-dev": {
+    "phpunit/phpunit": "5.*"
+  },
+  "autoload" : {
+    "psr-0" : {
+      "OLOG" : "",
+      "Tests": ""
+    }
+  }
+}
