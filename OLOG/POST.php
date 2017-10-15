@@ -12,7 +12,9 @@ class POST
             $value = $_POST[$key];
         }
 
-        \OLOG\Assert::assert($value != '', 'Missing required POST field ' . $key);
+        if ($value == '') {
+            throw new \Exception('Missing required POST field ' . $key);
+        }
 
         return $value;
     }

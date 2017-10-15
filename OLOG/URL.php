@@ -7,13 +7,13 @@ class URL
     static public function path()
     {
         $url = $_SERVER['REQUEST_URI'];
-        $no_form = $url;
+        $path = $url;
 
         if (strpos($url, '?')) {
-            list($no_form, $form) = explode('?', $url);
+            list($path, $form) = explode('?', $url);
         }
 
-        return $no_form;
+        return $path;
     }
 
     static public function current()

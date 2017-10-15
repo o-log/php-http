@@ -11,7 +11,9 @@ class GET {
             $value = $_GET[$key];
         }
 
-        \OLOG\Assert::assert($value != '', 'Missing required GET field ' . $key); // TODO: library used while not mentioned in config
+        if ($value == ''){
+            throw new \Exception('Missing required GET field ' . $key);
+        }
 
         return $value;
     }

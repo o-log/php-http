@@ -85,7 +85,7 @@ class Exits
 
     public static function setAllowedMethodsHeaders($allowed_methods_arr)
     {
-        Assert::assert(is_array($allowed_methods_arr));
+        assert(is_array($allowed_methods_arr));
         self::setAccessControlAllowOriginHeader();
 
         header('Access-Control-Allow-Methods: ' . implode(', ', $allowed_methods_arr));
@@ -95,10 +95,12 @@ class Exits
     public static function setAccessControlAllowOriginHeader()
     {
         // TODO: review!
+        /*
         $allowed_hosts = \OLOG\ConfWrapper::value('access_control_allow_origin_header', '');
 
         if ($allowed_hosts != '') {
             header('Access-Control-Allow-Origin: ' . $allowed_hosts);
         }
+        */
     }
 }
